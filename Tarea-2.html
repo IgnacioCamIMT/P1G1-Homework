@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Mi primera página web</title>
+</head>
+
+<body>
+<h1>Avance 3</h1>
+<h2>Universidad Privada Cumbre</h2>
+<h1>MyNombre</h1>
+
+<button onclick="EjercicioUno()">Es N positivo o negativo?</button>
+<button onclick="EjercicioDos()">Es N mayor que 10?</button>
+<button onclick="EjercicioTres()">A y B, cuál es mayor?</button>
+
+<script>
+//Código de programación - INICIO
+
+//Se repara un bug en el que los números que empiezan con "1"
+//seguidos de ceros se consideran menores que otros números.
+//Todo número introducido con "prompt" se convierte en entero.
+//Ej: La operación (10 > 9) devolvía un falso lógico.
+
+//Ejercicio: Cómo saber si un número N es positivo o negativo.
+function EjercicioUno() {
+    var N = prompt("Ingrese N:", 10);
+    N = parseInt(N, 10); //Convierte N en un entero decimal.
+    if (N == 0){
+        alert(N + " no es positivo ni negativo");
+    }
+    else {
+        if (N > 0){
+            alert(N + " es positivo");
+        }
+        else{
+            alert(N + " es negativo")
+        }
+    }
+}
+
+//Ejercicio: Cómo saber si un número N es mayor que 10.
+function EjercicioDos() {
+    var N = prompt("Ingrese N:", 15);
+    N = parseInt(N, 10);
+    if (N == 10){
+        alert(N + " es IGUAL que 10");
+    }
+    else {
+        if (N > 10){
+            alert(N + " es MAYOR que 10");
+        }
+        else{
+            alert(N + " es MENOR que 10")
+        }
+    }
+}
+
+//Ejercicio: Dado dos números A y B, retornar el MAYOR
+function EjercicioTres() {
+    var A = prompt("Ingrese A:", 3);
+    A = parseInt(A, 10);
+    var B = prompt("Ingrese B:", 7);
+    B = parseInt(B, 10);
+    if (A > B){
+        alert(A + " es mayor");
+    }
+    else {
+        alert(B + " es mayor");
+    }
+}
+
+//Código de programación - FIN
+</script>
+</body>
+</html>
